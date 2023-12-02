@@ -61,12 +61,9 @@ func main() {
 		case color:
 			if (char == 'r' || char == 'g' || char == 'b') && numStart > 0 {
 				num, _ := getInt(file, numStart, index-1)
-
-				//fmt.Printf("game %d currentColor %c num %d\n", gameNumber, char, num)
 				numStart = -1
 
 				if num > limits[char] {
-					//println("skip")
 					state = skip
 					break
 				}
@@ -74,7 +71,7 @@ func main() {
 				numStart = index
 			} else if char == '\n' {
 				state = game
-				fmt.Printf("Game %d is possible\n", gameNumber)
+				//fmt.Printf("Game %d is possible\n", gameNumber)
 				sum += gameNumber
 			}
 			break
